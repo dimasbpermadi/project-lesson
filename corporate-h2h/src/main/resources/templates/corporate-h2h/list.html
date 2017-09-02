@@ -12,6 +12,22 @@
 		
 		<a th:href="@{/corporate-h2h/form}" class="btn btn-primary">Insert New Client</a>
 		<hr>
+		<table class="table table-striped">
+			<tr>
+				<th>clientid</th>
+				<th>clientname</th>
+				<th>description</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr th:each="n : ${listClient}">
+				<td th:text="${n.clientid}">123</td>
+				<td th:text="${n.clientname}">Endy</td>
+				<td th:text="${n.description}">endy@muhardin.com</td>
+				<td>
+					<a class="btn" th:href="@{/corporate-h2h/form}" >edit</a> 
+					<a class="btn" href="view">detail</a></td>
+			</tr>
+		</table>
 		
 	</section>
 </body>
